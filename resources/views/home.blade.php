@@ -49,7 +49,7 @@
      	<td class="text-center"> <a href="{{ route('edit',   $all->id )}} " class="btn btn-primary btn-raised btn-sm">
 				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 			</a>
-       <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
+       <button type="button" class="btn btn-danger btn-sm" id="myBtn">edit</button>
 
 			<form method="POST"  action ="{{route('destroy',  $all->id )}} "  id="delete-form-{{  $all->id }}"style="display:none; " >
 				{{csrf_field() }}
@@ -102,28 +102,32 @@
       <div class="modal-content">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+          <h4><span class="glyphicon glyphicon-lock"></span> edit</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form">
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> firstname</label>
+              <input type="text" class="form-control" id="firstname" placeholder="Enter firstname">
             </div>
             <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> lastname </label>
+              <input type="text" class="form-control" id="lastname" placeholder="Enter lastname ">
             </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> email</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter email">
+            </div>
+ 
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
             </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> update </button>
           </form>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="#">Sign Up</a></p>
-          <p>Forgot <a href="#">Password?</a></p>
+          
         </div>
       </div>
       
