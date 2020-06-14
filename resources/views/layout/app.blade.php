@@ -17,6 +17,7 @@
 
 	</head>
 	<body>
+  <input type="text"  value="{{route('home')}}" id="indexLink"   hidden   >
 
 		@include("layout.navbar")
 
@@ -72,7 +73,7 @@ $(document).on('click', "#level-edit-item", function() {
 
 
 
-    var action= $("#indexLink").val()+'/task-levels/'+id;
+    var action= $("#indexLink").val()+'/update/'+id;
     $("#level-edit-form").attr('action',action);
 
     // fill the data in the input fields
