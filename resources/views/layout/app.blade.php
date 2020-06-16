@@ -45,52 +45,6 @@
 		</script>
 
 
-		 <!-- /Attachment Modal -->
-		 <script>
-$(document).ready(function(){
-
-$(document).on('click', "#level-edit-item", function() {
-
-    $(this).addClass('edit-item-trigger-clicked'); //useful for identifying which trigger was clicked and consequently grab data from the correct row and not the wrong one.
-
-    var options = {
-      'backdrop': 'static'
-    };
-    
-    $('#level-edit-modal').modal(options)
-  });
-
-  // on modal show
-  $('#level-edit-modal').on('show.bs.modal', function() {
-    var el = $(".edit-item-trigger-clicked"); // See how its usefull right here?
-    var row = el.closest(".data-row");
-
-    // get the data
-    var id = el.data('item-id');
-    var firstname = row.children(".firstname").text();
-    var lastname = row.children(".lastname").text();
-    var email = row.children(".email").text();
-
-
-
-    var action= $("#indexLink").val()+'/update/'+id;
-    $("#level-edit-form").attr('action',action);
-
-    // fill the data in the input fields
-    $("#modal-input-id").val(id);
-    $("#modal-input-firstname").val(firstname);
-    $("#modal-input-lastname").val(lastname);
-    $("#modal-input-email").val(email);
-
-  });
-  //on modal hide
-  $('#level-edit-modal').on('hide.bs.modal', function() {
-    $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
-    $("#level-edit-form").trigger("reset");
-  });
-}) ;
-</script> 
-
 
 	</body>
 </html>    

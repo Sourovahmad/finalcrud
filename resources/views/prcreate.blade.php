@@ -7,15 +7,12 @@
  @csrf
   <div class="form-group">
     <label for="exampleInputEmail1"></label>
-    <input type="text"  name="firstname" class="form-control"  placeholder="Enter firstname">   
+    <input type="text"  name="name" class="form-control"  placeholder="Enter name">   
   </div>
+
   <div class="form-group">
     <label for="exampleInputEmail1"></label>
-    <input type="text"  name="lastname" class="form-control"  placeholder="Enter last name ">   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1"></label>
-    <input type="text"  name="email" class="form-control"  placeholder="Enter E-mail">   
+    <input type="text"  name="descreption" class="form-control"  placeholder="Enter descreption">   
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1"></label>

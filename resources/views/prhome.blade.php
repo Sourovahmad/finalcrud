@@ -30,9 +30,9 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">first</th>
-      <th scope="col">last</th>
-      <th scope="col">email</th>
+      <th scope="col">name</th>
+      <th scope="col">descreption</th>
+      <th scope="col">comment</th>
       <th scope="col" class="text-center">action </th>
       
     </tr>
@@ -43,9 +43,8 @@
                             <?php $id = $level->id; ?>
                             <tr class="data-row">
                                 <td class="iteration">{{$i++}}</td>
-                                <td class="  word-break firstname">{{$level->firstname}}</td>
-                                <td class=" word-break lastname ">{{$level->lastname}}</td>
-                                <td class=" word-break email ">{{$level->email}}</td>
+                                <td class="  word-break name">{{$level->name}}</td>
+                                <td class=" word-break descreption ">{{$level->descreption}}</td>
                                 <td class=" word-break comment ">{{$level->comment}}</td>
                              
 
@@ -105,20 +104,17 @@
                         <!-- /id -->
                         <!-- name -->
                         <div class="form-group">
-                            <label class="col-form-label" for="modal-input-firstname">firstname</label>
-                            <input type="text" name="firstname" class="form-control" id="modal-input-firstname" required autofocus>
+                            <label class="col-form-label" for="modal-input-name">name</label>
+                            <input type="text" name="name" class="form-control" id="modal-input-name" required autofocus>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-form-label" for="modal-input-lastname">lastname</label>
-                            <input type="text" name="lastname" class="form-control" id="modal-input-lastname" required autofocus>
+                            <label class="col-form-label" for="modal-input-descreption">descreption</label>
+                            <input type="text" name="descreption" class="form-control" id="modal-input-descreption" required autofocus>
                         </div>
                         <!-- /name -->  
                         <!-- description -->
-                        <div class="form-group">
-                            <label class="col-form-label" for="modal-input-email">email</label>
-                            <input type="text" name="email" class="form-control" id="modal-input-email" required>
-                        </div>
+                      
                         <div class="form-group">
                             <label class="col-form-label" for="modal-input-comment">comment</label>
                             <input type="text" name="comment" class="form-control" id="modal-input-comment" required>
@@ -158,22 +154,22 @@ $(document).on('click', "#level-edit-item", function() {
 
     // get the data
     var id = el.data('item-id');
-    var firstname = row.children(".firstname").text();
-    var lastname = row.children(".lastname").text();
-    var email = row.children(".email").text();
+    var name = row.children(".name").text();
+    var descreption = row.children(".descreption").text();
     var comment = row.children(".comment").text();
 
 
 
 
     var action= $("#indexLink").val()+'/update/'+id;
+    console.log(action);
     $("#level-edit-form").attr('action',action);
+    
 
     // fill the data in the input fields
     $("#modal-input-id").val(id);
-    $("#modal-input-firstname").val(firstname);
-    $("#modal-input-lastname").val(lastname);
-    $("#modal-input-email").val(email);
+    $("#modal-input-name").val(name);
+    $("#modal-input-descreption").val(descreption);
     $("#modal-input-comment").val(comment);
 
   });

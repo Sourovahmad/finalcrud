@@ -14,7 +14,7 @@ class FinalcrudController extends Controller
      */
     public function index()
     {
-          $data =  finalcrud::paginate(2);
+          $data =  finalcrud::paginate(5);
         return view('home',compact('data'));
     
     }
@@ -41,6 +41,7 @@ class FinalcrudController extends Controller
          $finalcrud->firstname= $request->firstname;
          $finalcrud->lastname=$request->lastname;
          $finalcrud->email=$request->email;
+         $finalcrud->comment=$request->comment;
          $finalcrud->save();
          return redirect(route("home"));
     }
@@ -84,6 +85,7 @@ class FinalcrudController extends Controller
         $finalcrud->firstname=$request->firstname;
         $finalcrud->lastname=$request->lastname;
         $finalcrud->email=$request->email;
+        $finalcrud->comment=$request->comment;
         
 
         $finalcrud->save();

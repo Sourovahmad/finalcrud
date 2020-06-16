@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFinalcrudsTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateFinalcrudsTable extends Migration
      */
     public function up()
     {
-        Schema::create('finalcruds', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string("firstname");
-            $table->string("lastname");
-            $table->string("email"); 
+            $table->string("name");
+            $table->string("descreption");
             $table->string("comment"); 
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateFinalcrudsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('finalcruds');
+        Schema::dropIfExists('products');
     }
 }
